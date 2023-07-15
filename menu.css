@@ -105,7 +105,13 @@ main {
 .menu-card span:first-of-type {
   font-weight: 700;
 }
-.menu-card img {
+.about-item {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-card img[alt="food"] {
   width: 100%;
   border-radius: 5px;
 }

@@ -14,8 +14,13 @@ function getMenu(data){
         const card = document.createElement("div");
         card.className = "menu-card";
         card.innerHTML = `<img src=${item.imgSrc} alt = "food">
-        <span>${item.name}</span>
-        <span>$${item.price}/-</span>
+        <div class = "about-item">
+        <div>
+        <div>${item.name}</div>
+        <div>$${item.price}/-</div>
+         </div>
+        <img src = "./assets/Group 4.png" width="25" height="25" alt="add">
+        </div>
         `
         menu.appendChild(card);
     }

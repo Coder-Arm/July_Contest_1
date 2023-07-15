@@ -36,9 +36,14 @@ function takeOrder(data){
     }
  }
     const prom = new Promise(resolve =>{
+        try{
         setTimeout(()=>{
             resolve(order);
         },2500)
+    }
+    catch(error){
+        console.log(error.message);
+    }
     })
     prom.then((order)=>{
         orderPrep(order);
@@ -49,9 +54,14 @@ function orderPrep(order){
     let obj = {...order,order_status : true,paid : false};
     console.log(obj);
     const prom = new Promise(resolve =>{
-        setTimeout(() => {
-            resolve(obj);
-        },1500)
+        try{
+            setTimeout(()=>{
+                resolve(order);
+            },2500)
+        }
+        catch(error){
+            console.log(error.message);
+        }
     })
     prom.then((obj)=>{
         payOrder(obj);
@@ -61,9 +71,14 @@ function payOrder(obj){
     let newObj = {...obj,order_status : true,paid : true};
     console.log(newObj);
     const prom = new Promise(resolve =>{
-        setTimeout(() => {
-            resolve(newObj);
-        },1000)
+        try{
+            setTimeout(()=>{
+                resolve(newObj);
+            },2500)
+        }
+        catch(error){
+            console.log(error.message);
+        }
     })
     prom.then((newObj)=>{
         thankyouFnc(newObj);

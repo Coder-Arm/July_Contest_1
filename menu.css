@@ -41,6 +41,9 @@ h4 {
 }
 
 header {
+  width: 100%;
+  position: sticky;
+  top: 0;
   background: #191d20;
 }
 nav {

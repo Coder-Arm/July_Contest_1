@@ -107,6 +107,10 @@ h2 a:hover {
   justify-content: space-between;
   gap: 5%;
 }
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+}
 .menu-card {
   width: 30%;
   display: flex;
